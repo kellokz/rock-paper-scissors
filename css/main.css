@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body h1 {
+  font-weight: 700;
+}
+
+.stage {
+  width: 100%;
+  height: 100vh;
+  background: radial-gradient(#1f3756, #141539);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreBoard {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40%;
+  border: 4px solid #606e85;
+  padding: 1%;
+  border-radius: 15px;
+}
+
+.scoreBoard .scoreDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+  height: 90%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  padding: 0 5px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.scoreBoard .scoreDisplay p {
+  margin-top: 5px;
+  margin-bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(red), to(black));
+  background-image: linear-gradient(90deg, red, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scoreBoard .scoreDisplay h1 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 50px;
+  background-image: -webkit-gradient(linear, left top, right top, from(red), to(black));
+  background-image: linear-gradient(90deg, red, black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gameBoard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2%;
+  width: 60%;
+  height: 60%;
+  background-image: url("../images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+}
+
+.gameBoard .paperWrapper {
+  position: relative;
+  bottom: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+  background-color: #5671f5;
+}
+
+.gameBoard .paperWrapper .paperBtn {
+  -webkit-box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-image: url(../images/icon-paper.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gameBoard .paperWrapper:hover {
+  background-color: #4865f4;
+}
+
+.gameBoard .scissorWrapper {
+  position: relative;
+  bottom: 160px;
+  left: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+  background-color: #eca922;
+}
+
+.gameBoard .scissorWrapper .scissorBtn {
+  -webkit-box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-image: url(../images/icon-scissors.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gameBoard .scissorWrapper:hover {
+  background-color: #ec9e0e;
+}
+
+.gameBoard .rockWrapper {
+  position: relative;
+  top: 150px;
+  right: 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+  background-color: #dd405d;
+}
+
+.gameBoard .rockWrapper .rockBtn {
+  -webkit-box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-image: url(../images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gameBoard .rockWrapper:hover {
+  background-color: #dc2e4e;
+}
+
+.duellboard {
+  display: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 2%;
+  width: 60%;
+  height: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 400px;
+}
+
+.duellboard .playerWrapper {
+  -webkit-animation: shakePlayer 0.5s ease-in forwards alternate 6;
+          animation: shakePlayer 0.5s ease-in forwards alternate 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+  background-color: #5671f5;
+}
+
+.duellboard .playerWrapper .player {
+  -webkit-box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-image: url(../images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.duellboard .aiWrapper {
+  -webkit-animation: shakeAi 0.5s ease-in forwards alternate 6;
+          animation: shakeAi 0.5s ease-in forwards alternate 6;
+  left: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -8px rgba(0, 0, 0, 0.15);
+  background-color: #eca922;
+}
+
+.duellboard .aiWrapper .ai {
+  -webkit-box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 6px rgba(0, 0, 0, 0.15);
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background-image: url(../images/icon-rock.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.duellboard h1 {
+  color: white;
+  margin: 0;
+}
+
+.duellboard .aiDiv, .duellboard .playerDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.duellboard .aiDiv h1, .duellboard .playerDiv h1 {
+  margin-bottom: 20px;
+}
+
+.duellboard .duellist {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@-webkit-keyframes shakePlayer {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+}
+
+@keyframes shakePlayer {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+}
+
+@-webkit-keyframes shakeAi {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+}
+
+@keyframes shakeAi {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+}
+
+.rules {
+  position: absolute;
+  bottom: 60px;
+  right: 60px;
+}
+
+.rules button {
+  font-size: 20px;
+  font-variant: small-caps;
+  color: white;
+  padding: 10px 40px;
+  outline: none;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#141539), to(#1f3756));
+  background-image: linear-gradient(#141539, #1f3756);
+  border: 1px solid white;
+}
+
+.rulesBtn:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1f3756), to(#141539));
+  background-image: linear-gradient(90deg, #1f3756, #141539);
+}
+
+.rulesOverlay {
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  top: 20%;
+  z-index: 2;
+  background-image: radial-gradient(#1f3756, #141539);
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 1px -3px 17px 5px #7dc2ff;
+  box-shadow: 1px -3px 17px 5px #7dc2ff;
+}
+
+.rulesOverlay #closeBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(lightgray));
+  background-image: linear-gradient(white, lightgray);
+  border-radius: 0px 0px 0px 10px;
+}
+
+.rulesOverlay #closeBtn:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(lightgray), to(white));
+  background-image: linear-gradient(lightgray, white);
+}
+
+.gameEnd {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gameEnd #continue {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: bold;
+  color: black;
+  padding: 10px 40px;
+  outline: none;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid white;
+}
+
+.gameEnd #continue:hover {
+  color: white;
+  background-color: #141539;
+}
+
+@media only screen and (max-width: 800px) {
+  .gameBoard {
+    position: relative;
+    width: 200%;
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  .scoreBoard {
+    width: 90%;
+    padding: 2%;
+  }
+  .duellboard .playerDiv, .duellboard .aiDiv {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+  }
+  .duellboard .duellist {
+    width: 150%;
+  }
+  .rules {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    bottom: 1%;
+    right: 0;
+  }
+  .rulesOverlay {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

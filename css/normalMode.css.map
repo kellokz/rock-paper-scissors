@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,OAAO,CAAC,+FAAI;ADEZ,AAAA,IAAI,CAAA;EACA,MAAM,EAAC,CAAC;EACR,OAAO,EAAC,CAAC;CACZ;;AAED,AAAA,MAAM,CAAA;EACF,KAAK,EAAC,IAAI;EACV,MAAM,EAAC,KAAK;EACZ,UAAU,EAAE,mCAAmC;CAClD",
+    "sources": [
+        "normalMode.scss",
+        "_variables.scss"
+    ],
+    "names": [],
+    "file": "normalMode.css"
+}

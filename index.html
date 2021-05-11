@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="js/normalMode.js" defer></script>
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    
+    <div class="stage">
+
+      <!--ScoreBoard --> 
+      <div class="scoreBoard">
+        <div><img src="images/logo.svg" alt="" /></div>
+        <div class="scoreDisplay">
+          <p>Score</p>
+          <h1 class="score"></h1>
+        </div>
+      </div>
+
+      <!--animate__animated animate__backInDown //  animate__animated animate__backInUp --> 
+      <!--gameBoard -->
+      <div class="gameBoard">
+        <div class="paperWrapper"><button class="paperBtn"></button></div>
+        <div class="scissorWrapper"><button class="scissorBtn"></button></div>
+        <div class="rockWrapper"><button class="rockBtn"></button></div>
+      </div>
+
+      <!--rulesSection -->
+      <div class="rules"><button class="rulesBtn">Rules</button></div>
+      <div class="rulesOverlay">
+        <div><button id="closeBtn">&#10006</button></div>
+        <img src="images/image-rules.svg" alt="" />
+      </div>
+      <!--duellBoard -->
+      <div class="duellboard">
+        <div class="gameEnd animate__animated animate__zoomInDown"><h1></h1></div>
+        <div class="duellist">
+          <div class="playerDiv">
+            <h1>You Picked:</h1>
+            <div class="playerWrapper" ><div class="player"></div></div>
+          </div>
+          <div class="aiDiv">
+            <h1>Ai Picked:</h1>
+            <div class="aiWrapper"><div class="ai"></div></div>
+          </div>
+      </div>
+      <div class="gameEnd animate__animated animate__zoomInDown"><Button id="continue">Continue</Button></div>
+      </div>
+    </div>
+  </body>
+
+  <div class="attribution" style="display: none">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="#">Nils Tschirner</a>.
+  </div>
+</html>
